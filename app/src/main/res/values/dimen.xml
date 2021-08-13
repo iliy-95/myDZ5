@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="textSize" >30sp</dimen>
-    <dimen name="margin" >3sp</dimen>
-    <dimen name="raz">20sp</dimen>
+    <dimen name="textSize" >1sp</dimen>
+    <dimen name="margin" >10sp</dimen>
+    <dimen name="raz">30sp</dimen>
 </resources>
