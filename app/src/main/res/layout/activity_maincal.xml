@@ -9,6 +9,24 @@
     android:gravity="center"
     android:padding="20sp">
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/PADSTART">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/day_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/night_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RadioGroup>
+
     <EditText
         android:id="@+id/calcul_edittext"
         android:layout_width="match_parent"
@@ -29,7 +47,7 @@
         android:gravity="right"
         android:layout_margin="@dimen/MargButton">
 
-<androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ButtoDELE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +55,7 @@
             android:background="@drawable/naruto"
             android:text="@string/_DELE"
             android:textSize="@dimen/raz"
-    android:layout_margin="@dimen/MargButton"  />
+            android:layout_margin="@dimen/MargButton"  />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ButtoYM"

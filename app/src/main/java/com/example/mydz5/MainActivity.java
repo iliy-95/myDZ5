@@ -4,13 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
 public class MainActivity  extends AppCompatActivity implements View.OnClickListener {
-int counter=0;
+
+
+    static final int daytheme = 1;
+    static final int nighttheme = 2;
+    static final String KEY_SPS = "sp";
+    static final String KEY_My_theme = "My_theme";
+
+
+
+
 private EditText editText;
 
 
@@ -33,49 +43,92 @@ private EditText editText;
 
 
 
-
-    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        editText = findViewById(R.id.calcul_edittext);
-        button1= findViewById(R.id.Butto1);
-        button2= findViewById(R.id.Butto2);
-        button3=findViewById(R.id.Butto3);
-        button4= findViewById(R.id.Butto4);
-        button5= findViewById(R.id.Butto5);
-        button6= findViewById(R.id.Butto6);
-        button7= findViewById(R.id.Butto7);
-        button8= findViewById(R.id.Butto8);
-        button9= findViewById(R.id.Butto9);
-        button0= findViewById(R.id.Butto0);
-        buttonDELE= findViewById(R.id.ButtoDELE);
-        buttonYM= findViewById(R.id.ButtoYM);
-        buttonRAV= findViewById(R.id.ButtoRAV);
-        buttonPlus= findViewById(R.id.ButtonPlus);
-        buttonMinus= findViewById(R.id.Buttonminus);
-        buttonTOCHKA= findViewById(R.id.ButtoTOCHKA);
-
-        button1.setOnClickListener(this);
-        button2.setOnClickListener(this);
-        button3.setOnClickListener(this);
-        button4.setOnClickListener(this);
-        button5.setOnClickListener(this);
-        button6.setOnClickListener(this);
-        button7.setOnClickListener(this);
-        button8.setOnClickListener(this);
-        button9.setOnClickListener(this);
-        button0.setOnClickListener(this);
-        buttonMinus.setOnClickListener(this);
-        buttonDELE.setOnClickListener(this);
-        buttonYM.setOnClickListener(this);
-        buttonRAV.setOnClickListener(this);
-        buttonPlus.setOnClickListener(this);
-        buttonTOCHKA.setOnClickListener(this);
+        setTheme(getRealId(getMytheme()));
+        Log.d("myLogs", getRealId(getMytheme()) + "");
+        setContentView(R.layout.activity_maincal);
+        initView();
 
     }
+
+        private void initView() {
+
+            editText = findViewById(R.id.calcul_edittext);
+            button1 = findViewById(R.id.Butto1);
+            button2 = findViewById(R.id.Butto2);
+            button3 = findViewById(R.id.Butto3);
+            button4 = findViewById(R.id.Butto4);
+            button5 = findViewById(R.id.Butto5);
+            button6 = findViewById(R.id.Butto6);
+            button7 = findViewById(R.id.Butto7);
+            button8 = findViewById(R.id.Butto8);
+            button9 = findViewById(R.id.Butto9);
+            button0 = findViewById(R.id.Butto0);
+            buttonDELE = findViewById(R.id.ButtoDELE);
+            buttonYM = findViewById(R.id.ButtoYM);
+            buttonRAV = findViewById(R.id.ButtoRAV);
+            buttonPlus = findViewById(R.id.ButtonPlus);
+            buttonMinus = findViewById(R.id.Buttonminus);
+            buttonTOCHKA = findViewById(R.id.ButtoTOCHKA);
+
+            button1.setOnClickListener(this);
+            button2.setOnClickListener(this);
+            button3.setOnClickListener(this);
+            button4.setOnClickListener(this);
+            button5.setOnClickListener(this);
+            button6.setOnClickListener(this);
+            button7.setOnClickListener(this);
+            button8.setOnClickListener(this);
+            button9.setOnClickListener(this);
+            button0.setOnClickListener(this);
+            buttonMinus.setOnClickListener(this);
+            buttonDELE.setOnClickListener(this);
+            buttonYM.setOnClickListener(this);
+            buttonRAV.setOnClickListener(this);
+            buttonPlus.setOnClickListener(this);
+            buttonTOCHKA.setOnClickListener(this);
+
+
+
+
+
+
+            switch (getMytheme()) {
+                case 1:
+                    ((RadioButton) findViewById(R.id.day_theme)).setChecked(true);
+                    break;
+                case 2:
+                    ((RadioButton) findViewById(R.id.night_theme)).setChecked(true);
+                    break;
+
+            }
+            View.OnClickListener listener = new View.OnClickListener()  {
+                @Override
+                public void onClick(View v) {
+
+                    switch (v.getId()) {
+                        case R.id.day_theme:
+                            setMytheme(daytheme);
+                            break;
+
+                        case R.id.night_theme:
+                            setMytheme(nighttheme);
+                            break;
+                    }
+                    recreate();
+
+                }
+            };(findViewById(R.id.day_theme)).setOnClickListener(listener);
+            (findViewById(R.id.night_theme)).setOnClickListener(listener);
+
+
+            }
+
+
+
+
 
 
     @Override
@@ -148,4 +201,33 @@ private EditText editText;
                 break;
         }
     }
+
+    private void setMytheme(int Mytheme) {
+        SharedPreferences sharedPreferences = getSharedPreferences(KEY_SPS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(KEY_My_theme, Mytheme);
+        editor.apply();
+    }
+
+
+    private int getMytheme() {
+        SharedPreferences sharedPreferences = getSharedPreferences(KEY_SPS, MODE_PRIVATE);
+        return sharedPreferences.getInt(KEY_My_theme, -1);
+    }
+
+
+    private int getRealId(int currentTheme) {
+
+        switch (currentTheme) {
+            case daytheme:
+                return R.style.myDZ5_1;
+            case nighttheme:
+                return R.style.myDZ5_2;
+            default:
+                return R.style.Theme_MyDZ5;
+
+        }
+
+
+}
 }
