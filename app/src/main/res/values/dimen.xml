@@ -3,4 +3,6 @@
     <dimen name="textSize" >1sp</dimen>
     <dimen name="margin" >10sp</dimen>
     <dimen name="raz">30sp</dimen>
+    <dimen name="MargButton">5sp</dimen>
+
 </resources>

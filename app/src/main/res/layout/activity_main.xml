@@ -26,16 +26,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="right">
+        android:gravity="right"
+        android:layout_margin="@dimen/MargButton">
 
 <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ButtoDELE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-    android:background="@drawable/naruto"
+            android:background="@drawable/naruto"
             android:text="@string/_DELE"
-            android:textSize="@dimen/raz" />
+            android:textSize="@dimen/raz"
+    android:layout_margin="@dimen/MargButton"  />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ButtoYM"
@@ -44,7 +46,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_YM"
-            android:textSize="@dimen/raz" />
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ButtoRAV"
@@ -53,7 +56,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_RAV"
-            android:textSize="@dimen/raz" />
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ButtonPlus"
@@ -62,7 +66,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_plus"
-            android:textSize="@dimen/raz" />
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Buttonminus"
@@ -71,7 +76,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_minus"
-            android:textSize="@dimen/raz" />
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton"/>
     </LinearLayout>
 
     <LinearLayout
@@ -87,7 +93,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_1"
-            android:textSize="@dimen/raz" />
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Butto2"
@@ -96,7 +103,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_2"
-            android:textSize="@dimen/raz" />
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton" />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Butto3"
             android:layout_width="0dp"
@@ -104,7 +112,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_3"
-            android:textSize="@dimen/raz"/>
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton"/>
     </LinearLayout>
 
 
@@ -124,7 +133,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_4"
-            android:textSize="@dimen/raz"/>
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton"/>
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Butto5"
             android:layout_width="0dp"
@@ -132,7 +142,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_5"
-            android:textSize="@dimen/raz"/>
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton"/>
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Butto6"
             android:layout_width="0dp"
@@ -140,7 +151,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_6"
-            android:textSize="@dimen/raz"/>
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton"/>
 
     </LinearLayout>
 
@@ -151,27 +163,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <androidx.appcompat.widget.AppCompatButton            android:id="@+id/Butto7"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Butto7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_7"
-            android:textSize="@dimen/raz"/>
-        <androidx.appcompat.widget.AppCompatButton            android:id="@+id/Butto8"
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Butto8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_8"
-            android:textSize="@dimen/raz"/>
-        <androidx.appcompat.widget.AppCompatButton            android:id="@+id/Butto9"
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Butto9"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_9"
-            android:textSize="@dimen/raz"/>
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton" />
     </LinearLayout>
 
     <LinearLayout
@@ -186,7 +204,8 @@
             android:layout_weight="5"
             android:background="@drawable/naruto"
             android:text="@string/_0"
-            android:textSize="@dimen/raz"/>
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton" />
 
         <androidx.appcompat.widget.AppCompatButton            android:id="@+id/ButtoTOCHKA"
             android:layout_width="0dp"
@@ -194,7 +213,8 @@
             android:layout_weight="1"
             android:background="@drawable/naruto"
             android:text="@string/_TOCHKA"
-            android:textSize="@dimen/raz" />
+            android:textSize="@dimen/raz"
+            android:layout_margin="@dimen/MargButton" />
 
 
 
